@@ -1,5 +1,4 @@
 # Harmony #
-![mesh.png](https://bitbucket.org/repo/8AGaBd/images/33354523-mesh.png)
 
 Introduction
 ========
@@ -20,21 +19,15 @@ Currently, Harmony does not have a settings dialog (hopefully soon!), but still 
 * **Google.OAuth.RefreshToken**: Stores the OAuth refresh token to allow Harmony to re-authenticate in future syncs. Initially this is empty, and will be populated as part syncing for the first time. There is no need to change this value at all.
 * **Google.CalendarToSync.Id**: The Id of the Google calendar to sync with. This can be found in your Calendar Settings > Calendar Details > Calendar Address. If you only have one calendar on your account, this will often be your Google account e-mail address.
 
-![mesh-calendar-id.png](https://bitbucket.org/repo/8AGaBd/images/721399129-mesh-calendar-id.png)
-
 * **Harmony.SynchronisationInterval**: This is how often Harmony will synchronise the two calendars. By default this is set to '00:30:00' (every 30 minutes).
 * **Harmony.PastWeeksToSynchronise**: This is how far into the past that Harmony will look for events to sync.
 * **Harmony.FutureWeeksToSynchronise**: This is how far into the future that Harmony will look for events to sync.
 
 Authenticating
 --------
-Harmony uses OAuth to access you Google Calendar. When a sync is first performed, Harmony will require you to allow it to access your Google calendar. A browser window will open asking for this access:
-
-![mesh-authorise.png](https://bitbucket.org/repo/8AGaBd/images/1661690078-mesh-authorise.png)
+Harmony uses OAuth to access you Google Calendar. When a sync is first performed, Harmony will require you to allow it to access your Google calendar. A browser window will open to ask you for this access.
 
 Accepting the request will then display an 'Access Token', which you will need to copy and paste into the dialog that Harmony provides.
-
-![mesh-authorise-token-enter.png](https://bitbucket.org/repo/8AGaBd/images/3604648509-mesh-authorise-token-enter.png)
 
 Once this is done, Harmony will attempt to connect to your Google calendar, and if successful, it will store a 'Refresh Token' into the .config which will allow continued access without re-prompting for another 'Access Token'.
 
@@ -44,9 +37,7 @@ Currently, Harmony only provides a one-way synchronisation mechanism which flows
 
 Indicators
 --------
-The colour of the system tray icon indicates the status of Harmony. Mousing over the icon will also give some brief information about when the last sync occurred, and how many events were added/deleted.
-
-![mesh-indicators.png](https://bitbucket.org/repo/8AGaBd/images/1869792216-mesh-indicators.png)
+The colour of the system tray icon indicates the status of Harmony (Blue = idle, Green = sync in progress, Yellow = sync failed). Mousing over the icon will also give some brief information about when the last sync occurred, and how many events were added/deleted.
 
 License
 ========
