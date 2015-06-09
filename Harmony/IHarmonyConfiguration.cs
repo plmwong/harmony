@@ -6,6 +6,6 @@ namespace Harmony
     {
         TimeSpan SynchronisationInterval { get; set; }
         int PastWeeksToSynchronise { get; }
-        int FutureWeeksToSynchronise { get; } 
+        int FutureWeeksToSynchronise { get; }
     }
 }

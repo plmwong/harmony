@@ -1,7 +1,6 @@
 ﻿namespace Harmony.Core
 {
-	public static class CoreAssemblyHandle
-	{
-	}
+    public static class CoreAssemblyHandle
+    {
+    }
 }
-

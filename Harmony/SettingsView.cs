@@ -17,12 +17,12 @@ namespace Harmony
             base.OnLoad(e);
 
             Resizable = false;
-            
+
             MaximizeBox = false;
             MinimizeBox = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = string.Format("{0} - Settings", Resources.ApplicationName);
-            
+
             ToolTip.For(labelCalendarId, Resources.ToolTip_CalendarId);
             ToolTip.For(labelSyncInterval, Resources.ToolTip_SyncInterval);
 
@@ -62,7 +62,7 @@ namespace Harmony
         public TimeSpan SynchronisationInterval
         {
             get { return TimeSpan.FromMinutes(trackbarSyncInterval.Value); }
-            set { trackbarSyncInterval.Value = (int)value.TotalMinutes; }
+            set { trackbarSyncInterval.Value = (int) value.TotalMinutes; }
         }
 
         private void buttonOK_Click(object sender, EventArgs e)

@@ -2,10 +2,10 @@
 
 namespace Harmony.Core.Calendars
 {
-	public interface IWriteCalendar<TCalendarItem>
-	{
-		void DeleteEntry(Event @event);
-		void AddEntry(Event @event);
-	}
+    // ReSharper disable once UnusedTypeParameter
+    public interface IWriteCalendar<TCalendarItem>
+    {
+        void DeleteEntry(Event @event);
+        void AddEntry(Event @event);
+    }
 }
-

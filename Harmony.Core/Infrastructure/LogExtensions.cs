@@ -11,7 +11,7 @@
             if (indentLevel > 0)
             {
                 var emptySpaceAmount = (indentLevel - 1);
-                var emptySpace = new string(' ', emptySpaceAmount * IndentLength);
+                var emptySpace = new string(' ', emptySpaceAmount*IndentLength);
 
                 prefix = emptySpace + " -> ";
             }

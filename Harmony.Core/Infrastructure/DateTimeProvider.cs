@@ -7,6 +7,6 @@ namespace Harmony.Core.Infrastructure
         public DateTime Now
         {
             get { return DateTime.Now; }
-        } 
+        }
     }
 }

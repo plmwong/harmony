@@ -3,6 +3,7 @@
 namespace Harmony
 {
     public delegate void LoadEventHandler(object sender, EventArgs e);
+
     public delegate void SaveEventHandler(object sender, EventArgs e);
 
     public interface ISettingsView

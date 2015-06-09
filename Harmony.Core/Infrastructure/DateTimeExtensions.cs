@@ -34,7 +34,7 @@ namespace Harmony.Core.Infrastructure
 
         public static TimeSpan Weeks(this int weeks)
         {
-            return new TimeSpan(7 * weeks, 0, 0, 0);
+            return new TimeSpan(7*weeks, 0, 0, 0);
         }
 
         public static TimeSpan Days(this int days)
@@ -53,4 +53,3 @@ namespace Harmony.Core.Infrastructure
         }
     }
 }
-

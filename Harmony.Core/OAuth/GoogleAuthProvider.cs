@@ -9,23 +9,23 @@ using log4net;
 namespace Harmony.Core.OAuth
 {
     public class GoogleAuthProvider : IAuthProvider
-	{
-		private readonly IGoogleConfiguration _configuration;
+    {
+        private readonly IGoogleConfiguration _configuration;
 
         private static readonly ILog Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
-		public GoogleAuthProvider(IGoogleConfiguration configuration)
-		{
-			_configuration = configuration;
-		}
+        public GoogleAuthProvider(IGoogleConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
 
-		public IAuthorizationState Authorise(NativeApplicationClient nativeApplicationClient)
-		{
-			var authState = CreateCalendarAuthorisationState();
+        public IAuthorizationState Authorise(NativeApplicationClient nativeApplicationClient)
+        {
+            var authState = CreateCalendarAuthorisationState();
 
-		    if (_configuration.GoogleRefreshToken.IsNullOrEmpty())
-		    {
-		        Log.Warn("No refresh token available for OAuth, cannot establish authorisation.");
+            if (_configuration.GoogleRefreshToken.IsNullOrEmpty())
+            {
+                Log.Warn("No refresh token available for OAuth, cannot establish authorisation.");
 
                 var authUri = nativeApplicationClient.RequestUserAuthorization(authState);
                 throw new GoogleAuthorizationRequiredException(authUri.ToString());
@@ -36,8 +36,8 @@ namespace Harmony.Core.OAuth
             authState.RefreshToken = _configuration.GoogleRefreshToken;
             nativeApplicationClient.RefreshToken(authState, null);
 
-			return authState;
-		}
+            return authState;
+        }
 
         private static IAuthorizationState CreateCalendarAuthorisationState()
         {
@@ -58,6 +58,5 @@ namespace Harmony.Core.OAuth
 
             return authState;
         }
-	}
+    }
 }
-

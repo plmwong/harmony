@@ -32,7 +32,7 @@ namespace Harmony
             Log.Info("Bootstrapping Harmony...");
             var container = RegisterContainer();
             var meshPresenter = container.Resolve<HarmonyPresenter>();
-            
+
             Log.Info("Starting up Harmony...");
             Application.Run(meshPresenter.View as HarmonyView);
             Log.Info("Exiting Harmony...");

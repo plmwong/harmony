@@ -2,6 +2,6 @@
 {
     public interface IPresenter<out TView>
     {
-         TView View { get; }
+        TView View { get; }
     }
 }

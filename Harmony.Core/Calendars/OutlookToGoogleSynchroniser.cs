@@ -122,4 +122,3 @@ namespace Harmony.Core.Calendars
         }
     }
 }
-

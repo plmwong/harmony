@@ -1,7 +1,8 @@
-﻿using System.Diagnostics;
+﻿using System;
 using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
+using Harmony.Core.Infrastructure;
 
 namespace Harmony
 {
@@ -10,9 +11,14 @@ namespace Harmony
         public static void SetTrayIcon(this NotifyIcon notifyIcon, string iconName)
         {
             var assembly = Assembly.GetExecutingAssembly();
-            using (var iconStream = assembly.GetManifestResourceStream(string.Format("Harmony.{0}.ico", iconName)))
+            var iconFileName = "Harmony.{0}.ico".FormatWith(iconName);
+
+            using (var iconStream = assembly.GetManifestResourceStream(iconFileName))
             {
-                Debug.Assert(iconStream != null);
+                if (iconStream == null)
+                {
+                    throw new InvalidOperationException("Could not find application tray icon '{0}'".FormatWith(iconFileName));
+                }
 
                 notifyIcon.Icon = new Icon(iconStream, 40, 40);
             }

@@ -1,7 +1,6 @@
 ﻿namespace Harmony.Core.Calendars
 {
-	public interface ICalendar
-	{
-	}
+    public interface ICalendar
+    {
+    }
 }
-

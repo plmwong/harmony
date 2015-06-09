@@ -10,28 +10,16 @@ namespace Harmony
 
         public string GoogleRefreshToken
         {
-            get
-            {
-                return ConfigurationManager.AppSettings["Google.OAuth.RefreshToken"];
-            }
+            get { return ConfigurationManager.AppSettings["Google.OAuth.RefreshToken"]; }
 
-            set
-            {
-                ChangeAppSetting("Google.OAuth.RefreshToken", value);
-            }
+            set { ChangeAppSetting("Google.OAuth.RefreshToken", value); }
         }
 
         public string GoogleCalendarId
         {
-            get
-            {
-                return ConfigurationManager.AppSettings["Google.CalendarToSync.Id"];
-            }
+            get { return ConfigurationManager.AppSettings["Google.CalendarToSync.Id"]; }
 
-            set
-            {
-                ChangeAppSetting("Google.CalendarToSync.Id", value);
-            }
+            set { ChangeAppSetting("Google.CalendarToSync.Id", value); }
         }
 
         #endregion
@@ -40,10 +28,7 @@ namespace Harmony
 
         public TimeSpan SynchronisationInterval
         {
-            get
-            {
-                return TimeSpan.Parse(ConfigurationManager.AppSettings["Harmony.SynchronisationInterval"]);
-            }
+            get { return TimeSpan.Parse(ConfigurationManager.AppSettings["Harmony.SynchronisationInterval"]); }
 
             set { ChangeAppSetting("Harmony.SynchronisationInterval", value.ToString()); }
         }

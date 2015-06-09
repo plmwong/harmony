@@ -1,8 +1,7 @@
 namespace Harmony.Core.Calendars
 {
-	public interface IOutlookCalendarFactory
-	{
-		OutlookCalendar Create();
-	}
+    public interface IOutlookCalendarFactory
+    {
+        OutlookCalendar Create();
+    }
 }
-

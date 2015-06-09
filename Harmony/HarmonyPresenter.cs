@@ -54,7 +54,7 @@ namespace Harmony
 
         private void StartSyncTimer()
         {
-            _synchronisationIntervalTimer = new Timer(_meshConfiguration.SynchronisationInterval.TotalMilliseconds) { AutoReset = true };
+            _synchronisationIntervalTimer = new Timer(_meshConfiguration.SynchronisationInterval.TotalMilliseconds) {AutoReset = true};
             _synchronisationIntervalTimer.Elapsed += SynchronisationIntervalTimerOnElapsed;
             _synchronisationIntervalTimer.Start();
         }
@@ -76,7 +76,7 @@ namespace Harmony
             _settingsPresenter.Show();
         }
 
-        void OnSync(object sender, EventArgs e)
+        private void OnSync(object sender, EventArgs e)
         {
             Log.Info("Manual synchronisation requested, starting synchronisation.");
             Synchronise();
