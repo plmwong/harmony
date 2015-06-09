@@ -48,7 +48,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>mesh.ico</ApplicationIcon>
+    <ApplicationIcon>harmony.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autofac">
@@ -131,7 +131,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="mesh.ico" />
+    <EmbeddedResource Include="harmony.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
@@ -151,10 +151,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="mesh-syncing.ico" />
+    <EmbeddedResource Include="harmony-syncing.ico" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="mesh-failed.ico" />
+    <EmbeddedResource Include="harmony-failed.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
