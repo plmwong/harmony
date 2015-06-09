@@ -94,7 +94,7 @@ namespace Harmony
             _syncMenuItem.Enabled = true;
             _syncMenuItem.Text = Resources.ContextMenu_Sync;
 
-            _trayIcon.Text = string.Format("{0} | Last Synced: {1} | {2} Added, {3} Deleted", Resources.ApplicationName, timeSyncCompleted.ToString("G"), numberCreated, numberDeleted);
+            _trayIcon.Text = string.Format("Last Synced: {0} | {1} Added, {2} Deleted", timeSyncCompleted.ToString("G"), numberCreated, numberDeleted);
             _trayIcon.SetTrayIcon(HarmonyIcons.Normal);
         }
 
